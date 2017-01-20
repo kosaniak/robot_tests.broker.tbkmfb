@@ -85,7 +85,6 @@ Login
   [Arguments]  @{ARGUMENTS}
   Input text       id=eLogin          ${USERS.users['${ARGUMENTS[0]}'].login}
   Click Element    id=btnLogin
-  Sleep   2
 
 Змінити користувача
   [Arguments]  @{ARGUMENTS}
@@ -93,7 +92,6 @@ Login
   Sleep   2
   Input text      id=eLogin          ${USERS.users['${ARGUMENTS[0]}'].login}
   Click Element    id=btnLogin
-  Sleep   2
 
 Створити тендер
   [Arguments]  @{ARGUMENTS}
@@ -224,7 +222,6 @@ Login
   Input text          id=e_title                 ${title}
   Input text          id=e_description           ${description}
   Click Element     id=SendQuestion
-  Sleep  3
 
 Скасувати закупівлю
   [Arguments]  @{ARGUMENTS}
@@ -511,7 +508,6 @@ Login
   Click Element                         css=.bt_addAnswer:first-child
   Input Text                            id=e_answer        ${answer}
   Click Element                         id=SendAnswer
-  sleep   1
 
 Подати цінову пропозицію
   [Arguments]  @{ARGUMENTS}
@@ -709,7 +705,6 @@ Login
   Click Element                         xpath=(//span[contains(@class, 'btAnswer') and contains(@class, '${item_id}')])
   Input Text                            id=e_answer        ${answer_data.data.answer}
   Click Element                         id=SendAnswer
-  sleep   1
 
 Отримати кількість предметів в тендері
   [Arguments]  ${username}  ${tender_uaid}
@@ -742,7 +737,6 @@ Login
   Input text          id=e_title                 ${question.data.title}
   Input text          id=e_description           ${question.data.description}
   Click Element     id=SendQuestion
-  Sleep  3
 
 Додати предмет закупівлі
   [Arguments]  ${username}  ${tender_uaid}  ${item}
